@@ -36,11 +36,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-#scheme: Mist
-#scheme: Pisces
-scheme: Gemini
-
+# scheme: Muse
+scheme: Mist
+# scheme: Pisces
+# scheme: Gemini
 # Dark Mode
 darkmode: false
 
@@ -61,7 +60,7 @@ custom_logo: #/uploads/custom-logo.png
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/about/cclicenses/
-creative_commons:
+creative_commons: # 文章版权信息
   # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
   license: by-nc-sa
   # Available values: big | small
@@ -102,7 +101,7 @@ menu:
   archives: /archives/ || fa fa-archive
   resources: /resources/|| fa fa-download
   #schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
+  sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
@@ -124,7 +123,7 @@ sidebar:
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
   # Pisces | Gemini: 240
-  #width: 300
+  # width: 300
 
   # Sidebar Display (only for Muse | Mist), available values:
   #  - post    expand on posts automatically. Default.
@@ -134,7 +133,7 @@ sidebar:
   display: post
 
   # Sidebar padding in pixels.
-  padding: 18
+  padding: 15
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 12
 
@@ -174,10 +173,11 @@ social_icons:
 
 # Blog rolls
 links_settings:
-  icon: fa fa-globe
-  title: 友情链接
+  # icon: fa fa-globe
+  # title: 友情链接
   # Available values: block | inline
-  layout: inline
+  # layout: inline
+  layout: block
 
 links:
   #Title: https://example.com
@@ -220,7 +220,7 @@ footer:
     color: "#808080"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
-  copyright: X-Ray
+  copyright: EricRay
 
   # Powered by Hexo & NexT
   powered: false
@@ -389,13 +389,13 @@ back2top:
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: left | right
   start_at: left
   # Available values: top | bottom
   position: top
   reversed: false
-  color: "#37c6c0"
+  color: "#0a74daa1"
   height: 3px
 
 # Bookmark Support
@@ -407,7 +407,7 @@ bookmark:
   # If manual, only save it by clicking the bookmark-icon.
   save: auto
 
-# `Follow me on GitHub` banner in the top-right corner.
+# Follow me on GitHub banner in the top-right corner.
 github_banner:
   enable: true
   permalink: https://github.com/x-artspace
@@ -427,7 +427,7 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
   host:
@@ -440,8 +440,8 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Lato
-    size:
+    family: 微软雅黑
+    size: 1
 
   # Font settings for site title (.site-title).
   title:
@@ -482,7 +482,7 @@ exturl_icon: true
 
 # Google Webmaster tools verification.
 # See: https://developers.google.com/search
-google_site_verification:
+google_site_verification: googleb55b55ede6ac0216.html
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmasters
@@ -494,7 +494,8 @@ yandex_site_verification:
 
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site
-baidu_site_verification:
+baidu_site_verification: code-ZaOMLXXoEi
+baidu_push: true
 
 
 # ---------------------------------------------------------------
@@ -530,7 +531,7 @@ pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: false
+fancybox: true
 
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
@@ -641,12 +642,12 @@ gitalk:
 # Utterances
 # For more information: https://utteranc.es
 utterances:
-  enable: false
-  repo: user-name/repo-name # Github repository owner and name
+  enable: true
+  repo: x-artspace/BlogComments # Github repository owner and name
   # Available values: pathname | url | title | og:title
   issue_term: pathname
   # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
-  theme: github-light
+  theme: preferred-color-scheme # https://utteranc.es/ 
 
 # Isso
 # For more information: https://posativ.org/isso/
@@ -893,7 +894,7 @@ pace:
 # Canvas ribbon
 # For more information: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
@@ -901,7 +902,7 @@ canvas_ribbon:
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
 # three_waves
-three_waves: false # false/true
+# three_waves: false # false/true
 # canvas_lines: false
 # canvas_sphere: false
 
@@ -936,7 +937,7 @@ images: images
 # end file
 passage_end_tag:
   enabled: true
-# gun dong
+# roll
 moon_menu:
   back2top:
     enable: true
@@ -946,5 +947,28 @@ moon_menu:
     enable: true
     icon: fas fa-chevron-down
     order: -2
-    
+
+# Valine
+# See: https://github.com/xCss/Valine
+# Example:
+# valine: https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js
+
+# Valine
+# You can get your appid and appkey from https://leancloud.cn
+# More info available at https://valine.js.org
+valine:
+	enable: true
+	appid: QXDd0WpKhBIP93V4a6IpurJW-gzGzoHsz
+	appkey: jgIqj5WYGvRgsYVYYwVAT1qm
+	notify: false
+	verify: false
+	placeholder: 期待与您交流
+	avatar: mm
+	gust_info: nick,mail,link
+	pagesize: 10
+	language: zh-cn
+	visitor: false
+	comment_count: false
+	recordIP: false
+	serverURLs:    
 

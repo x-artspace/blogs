@@ -125,6 +125,7 @@ ignore:
 ## theme: landscape
 ## theme: cyanstyle
 theme: next
+plugins: hexo-generator-sitemap
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -156,3 +157,37 @@ live2d:
     height: 300
   mobile:
     show: false # is on phone
+
+# hexo-neat博文压缩
+    neat_enable: true
+# 压缩html
+    neat_html:
+      enable: true
+      exclude:  #排除的文件
+      
+# 压缩css  跳过min.css
+    neat_css:
+      enable: true
+      exclude:
+        # - '**/*.min.css'
+        
+# 压缩js 跳过min.js
+    neat_js:
+      enable: true
+      mangle: true
+      output:
+      compress:
+      exclude:
+        # - '**/*.min.js'
+        # - '**/jquery.fancybox.pack.js'
+        # - '**/index.js'  
+        # - '**/love.js'
+# 压缩博文配置结束
+# 注意上面的路径 **/* ,需要自己去配置正确的路径。，不然生成的是空白页面，当然你也可以删掉，全部压缩。
+
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml

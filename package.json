@@ -18,9 +18,11 @@
     "hexo-cake-moon-menu": "^2.5.0",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-baidu-sitemap": "^0.1.9",
     "hexo-generator-category": "^2.0.0",
-    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-index-pin-top": "^0.2.2",
     "hexo-generator-search": "^2.4.3",
+    "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-helper-live2d": "^3.1.0",
     "hexo-renderer-ejs": "^2.0.0",
@@ -29,5 +31,8 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^0.0.3",
     "live2d-widget-model-wanko": "^1.0.5"
+  },
+  "devDependencies": {
+    "hexo-neat": "^1.0.9"
   }
 }
